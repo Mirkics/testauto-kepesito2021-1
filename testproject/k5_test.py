@@ -66,6 +66,10 @@ def app_correct_visible_test():
 def number_check_test():
     play_button.click()
 
+# * Új játékot tudunk indítani
+#     * az init gomb megnyomásával a felület visszatér a kiindulási értékekhez
+#     * új bingo szelvényt kapunk más számokkal.
+def new_game_test():
 
 driver.quit()
 
