@@ -53,12 +53,13 @@ ascii_table = '!"#$%&' + "'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\
 def ascii_data_test():
 
 
-
 # * Megjelenik egy érvényes művelet:
 #     * `chr` megző egy a fenti ABCs műveleti táblából származó karaktert tartalmaz
 #     * `op` mező vagy + vagy - karaktert tartlamaz
 #     * `num` mező egy egész számot tartalamaz
 
+
+def valid_operation_test():
 
 
 # * Gombnyomásra helyesen végződik el a random művelet a fenti ABCs tábla alapján:
@@ -66,3 +67,7 @@ def ascii_data_test():
 #     * Ha a `+` művelet jelenik meg akkor balra lépve ha a `-` akkor jobbra lépve
 #     * A `num` mezőben megjelenő mennyiségű karaktert
 #     * az `result` mező helyes karaktert fog mutatni
+
+def valid_end_test():
+
+    driver.quit()
