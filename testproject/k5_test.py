@@ -37,3 +37,5 @@ driver.set_window_size(1000, 600, 600)
 URL = "https://ambitious-sky-0d3acbd03.azurestaticapps.net/k5.html"
 
 driver.get(URL)
+time.sleep(2)
+
