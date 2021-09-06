@@ -39,3 +39,33 @@ URL = "https://ambitious-sky-0d3acbd03.azurestaticapps.net/k5.html"
 driver.get(URL)
 time.sleep(2)
 
+init_button = driver.find_element_by_id("init")
+play_button = driver.find_element_by_id("spin")
+message = driver.find_element_by_id("message")
+bingo_table = driver.find_element_by_id("bingo-body")
+number_list = driver.find_elements_by_id("numbers-list")
+
+# * Az applikáció helyesen megjelenik:
+#     * A bingo tábla 25 darab cellát tartalmaz
+#     * A számlista 75 számot tartalmaz
+
+
+def app_correct_visible_test():
+    for i in range(70):
+        i += 1
+
+        assert i == 75
+
+    assert bingo_table.get_attribute("value") == 27
+
+
+# * Bingo számok ellenőzrzése:
+#     * Addig nyomjuk a `play` gobot amíg az első bingo felirat meg nem jelenik
+#     * Ellenőrizzük, hogy a bingo sorában vagy oszlopában lévő számok a szelvényről tényleg a már kihúzott számok közül kerültek-e ki
+#
+def number_check_test():
+    play_button.click()
+
+
+driver.quit()
+
