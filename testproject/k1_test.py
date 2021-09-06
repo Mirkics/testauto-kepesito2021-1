@@ -28,7 +28,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 opt = Options()
-opt.headless = False
+opt.headless = True
 
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
