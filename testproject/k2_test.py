@@ -56,23 +56,19 @@ all_colors_list = driver.find_element_by_id("allcolors").text
 
 
 def random_color_visible_test():
-    for i in all_colors_list:
-        colorname = [i+1]
 
-    assert colorname == random_colorname.text
+    assert random_colorname.is_enabled()
     assert test_color == "[     ]"
 
-print(random_colorname)
+# print(random_colorname)
 
 
 # * El lehet indítani a játékot a `start` gommbal.
 #     * Ha elindult a játék akkor a `stop` gombbal le lehet állítani.
 
 def game_start_test():
-    start_button.click()
-    stop_button.click()
-
-    assert test_color != "[     ]"
+    assert start_button.is_enabled()
+    assert stop_button.is_enabled()
 
 
 # * Eltaláltam, vagy nem találtam el.
@@ -88,11 +84,10 @@ def guess_test():
 
     stop_button.click()
     for i in all_colors_list:
-        colorname = [i+1]
-    if test_colorname != random_colorname.text:
-        result == "Incorrect!"
-    # else test_colorname == random_colorname.text
-    #     result == "Correct!"
+        if test_colorname == random_colorname.text:
+            assert result == "Incorrect!"
+        else:
+            assert result == "Correct!"
     print(test_colorname)
 
 

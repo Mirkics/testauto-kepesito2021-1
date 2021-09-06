@@ -43,6 +43,7 @@ input_data_list = ["abcd1234", "teszt233@", "abcd"]
 # def find_loc(id):
 #     return driver.find_element_by_id(id)
 
+
 def clear_and_fill_input(element, text):
     element.clear()
     element.send_keys(text)
@@ -54,7 +55,10 @@ def clear_and_fill_input(element, text):
 
 def correct_title_input():
     clear_and_fill_input(input_data_list[0])
-#
+
+    assert len(result_text) == 0
+
+
 # * Illegális karakterek esete:
 #     * title: teszt233@
 #     * Only a-z and 0-9 characters allewed.
